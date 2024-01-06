@@ -4,6 +4,8 @@ import { useHomePage } from '../../../hooks'
 import IfComponent from '../../../components/conditional-component/IfComponent';
 import { ContentWrapper, Img } from '../../../components';
 
+import './style.scss';
+
 const HeroBanner = () => {
   const { loading, background, setQuery, searchQueryHandler } = useHomePage();
   return (
