@@ -15,7 +15,7 @@ const Img = ({ src, className }) => {
 }
 
 Img.propTypes = {
-    src: PropTypes.string.isRequired,
+    src: PropTypes.any,
     className: PropTypes.string
 }
 
