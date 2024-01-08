@@ -1,12 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import './style.scss';
 import { useTrending } from '../../../hooks';
-import { ContentWrapper, SwitchTab } from '../../../components';
+import { Carousel, ContentWrapper, SwitchTab } from '../../../components';
 import { TabsSwitch } from '../../../constant/definition';
 
-const Trending = props => {
+const Trending = () => {
     const { data, loading, onTabChange  } = useTrending();
   return (
     <div className='trending'>
@@ -14,10 +13,9 @@ const Trending = props => {
             <span className='trending__title'>Trending</span>
             <SwitchTab data={TabsSwitch} onTabChange={onTabChange} />
         </ContentWrapper>
+        <Carousel data={data?.results} loading={loading} />
     </div>
   )
 }
-
-Trending.propTypes = {}
 
 export default Trending
