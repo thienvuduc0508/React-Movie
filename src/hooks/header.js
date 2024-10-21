@@ -65,6 +65,7 @@ export const useHeader = () => {
         showSearch,
         navigate,
         location,
+        setMobileMenu,
         setQuery,
         setShowSearch,
         openSearch,
