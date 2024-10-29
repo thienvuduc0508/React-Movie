@@ -1,5 +1,3 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { useHomePage } from '../../../hooks'
 import IfComponent from '../../../components/conditional-component/IfComponent';
 import { ContentWrapper, Img } from '../../../components';
@@ -7,7 +5,7 @@ import { ContentWrapper, Img } from '../../../components';
 import './style.scss';
 
 const HeroBanner = () => {
-  const { loading, background, setQuery, searchQueryHandler } = useHomePage();
+  const { loading, background, setQuery, searchQueryHandler, submitSearch } = useHomePage();
   return (
     <div className='hero'>
         <IfComponent condition={!loading}>
@@ -28,7 +26,7 @@ const HeroBanner = () => {
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyUp={searchQueryHandler}
                 />
-                <button className='search__button'>Search</button>
+                <button className='search__button' onClick={submitSearch}>Search</button>
             </div>
           </div>
         </ContentWrapper>

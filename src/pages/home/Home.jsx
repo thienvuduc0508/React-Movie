@@ -1,14 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-
 import HeroBanner from './hero-banner/HeroBanner'
 import Trending from './trending/Trending'
+import "./styles.scss";
+import Popular from './popular/Popular';
+import TopRated from './top-rated/TopRated';
 
-const Home = props => {
+const Home = () => {
   return (
-    <div className='page__home'>
+    <div className='homePage'>
         <HeroBanner />
         <Trending />
+        <Popular />
+        <TopRated/>
     </div>
   )
 }

@@ -1,15 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { HiOutlineSearch } from 'react-icons/hi';
 import { SlMenu } from 'react-icons/sl';
 import { VscChromeClose } from 'react-icons/vsc';
 
-
-import './style.scss';
 import ContentWrapper from '../content-wrapper/ContentWrapper';
 import IfComponent from '../conditional-component/IfComponent';
-import logo from '../../assets/images/logo.svg';
+import logo from '../../assets/images/logo.png';
 import { useHeader } from '../../hooks';
+import './style.scss';
 
 const Header = () => {
     const { show, mobileMenu, navigate, navigationHandler, openSearch,

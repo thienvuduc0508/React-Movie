@@ -1,4 +1,3 @@
-import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Details, Explore, Home, PageNotFound, SearchResult } from './pages'
 import { Footer, Header } from './components';
