@@ -14,3 +14,20 @@ export const useTrending = () => {
         onTabChange
     }
 }
+
+export const usePopularAndTopRated = (type) => {
+    const [endpoint, setEndpoint] = useState("movie");
+
+    const { data, loading } = useFetch(`/${endpoint}/${type}`);
+
+    const onTabChange = (tab) => {
+        setEndpoint(tab === "Movies" ? "movie" : "tv");
+    };
+
+    return {
+        endpoint,
+        data,
+        loading,
+        onTabChange
+    }
+}

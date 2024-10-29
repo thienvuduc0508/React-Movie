@@ -1,13 +1,13 @@
-.trending {
+.carouselSection {
     position: relative;
     margin-bottom: 70px;
-    .content__wrapper {
+    & > .contentWrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 20px;
     }
-    &__title {
+    .carouselTitle {
         font-size: 24px;
         color: white;
         font-weight: normal;

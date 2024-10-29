@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux';
 
-const Genres = ({ data, genres }) => {
+const Genres = ({ data }) => {
+    const { genres } = useSelector((state) => state.home);
     return (
         <div className="genres">
             {data?.map((g) => {

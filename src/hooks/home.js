@@ -24,7 +24,11 @@ export const useHomePage = () => {
     }, [data]);
 
     const searchQueryHandler = (event) => {
-        if (event.key === 'Enter' && query.length > 0) navigate(`/search/query`);
+        if (event.key === 'Enter' && query.length > 0) navigate(`/search/${query}`);
+    }
+
+    const submitSearch = () => {
+        if(query.length > 0) navigate(`/search/${query}`);
     }
 
 
@@ -43,6 +47,7 @@ export const useHomePage = () => {
         background,
         setQuery,
         searchQueryHandler,
+        submitSearch,
         loading
     }
     
